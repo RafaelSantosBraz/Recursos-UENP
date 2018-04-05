@@ -23,7 +23,7 @@
 
                 <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
                     Footer
-                </p:layoutUnit>
+                </p:layoutUnit>               
 
                 <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
                     <p:menu>
@@ -37,9 +37,24 @@
 
                     </p:menu>
                 </p:layoutUnit>
-
+                
                 <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
+                    <p:panel id="basic" header="Usuário" style="margin-bottom: 20px">
+                        <h:panelGrid columns="1" cellpadding="10">                            
+                            <p:outputLabel for="console" value="Tipo de Usuário:" />
+                            <p:selectOneMenu id="console" value="#{selectOneMenuView.console}">
+                                <f:selectItem itemLabel="Diferentes tipos de usuários" itemValue="" />                                
+                            </p:selectOneMenu>
+                            <p:panel header="Informações (se adequa ao tipo)" style="width: 100%">
+                                <h:panelGrid columns="1" cellpadding="10"> 
+                                    <p:inputText placeholder="Código..."/>
+                                    <p:inputText placeholder="Nome..."/>
+                                    <p:inputText placeholder="senha..."/>
+                                    demais informações pelo tipo... (vários paineis)
+                                </h:panelGrid>
+                            </p:panel>
+                        </h:panelGrid>
+                    </p:panel>
                 </p:layoutUnit>
 
             </p:layout>

@@ -23,23 +23,19 @@
 
                 <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
                     Footer
-                </p:layoutUnit>
+                </p:layoutUnit>                
 
-                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
-                    <p:menu>
-                        <p:submenu label="Resources">
-                            <p:menuitem value="Demo" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
-                            <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
-                            <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
-                            <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
-
-                        </p:submenu>
-
-                    </p:menu>
-                </p:layoutUnit>
-
-                <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
+                <p:layoutUnit position="center" style="">
+                    <p:panel id="basic" header="Login" style="position: absolute; width: auto;">
+                        <h:panelGrid columns="1" cellpadding="10">                            
+                            <p:inputText placeholder="código de usuário..." type="text"></p:inputText>
+                            <p:inputText placeholder="Senha..." type="password"></p:inputText>
+                            <p:separator />                        
+                            <p:button value="Login"/> 
+                            <p:button value="Novo Usuário"/>
+                            <p:button value="Esqueci minha senha"/>
+                        </h:panelGrid>
+                    </p:panel>
                 </p:layoutUnit>
 
             </p:layout>
