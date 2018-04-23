@@ -77,93 +77,62 @@
                 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
                     <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
-                        <div class="row center">
+                        <div class="row">
                             <label>
                                 <input type="checkbox" class="filled-in" checked="checked" />
                                 <span>Aceito e concordo com o Termo de Compromisso para utilização dos recursos da UENP-CLM</span>
                             </label>
                         </div>
-                        <div class="row center">
-                            <div class="chips chips-placeholder"></div>
+                        <div class="row">
+                            <div class="chips chips-placeholder col s12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">description</i>
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Descrição de Uso...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">today</i>
+                                <input id="textarea2" type="text" class="datepicker">
+                                <label for="textarea2">Data Inicial...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">access_time</i>
+                                <input id="textarea3" type="text" class="timepicker">
+                                <label for="textarea3">Hora Inicial...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="textarea4" type="text" class="datepicker">
+                                <label for="textarea4">Data Final...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">timelapse</i>
+                                <input id="textarea5" type="text" class="timepicker">
+                                <label for="textarea5">Hora Final...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select multiple>
+                                    <option value="" disabled selected>Escolha os dias em que o evento se repete...</option>
+                                    <option value="1">Segunda-feira</option>
+                                    <option value="2">Terça-feira</option>
+                                    <option value="3">Quarta-feira</option>
+                                    <option value="4">Quinta-feira</option>
+                                    <option value="5">Sexta-feira</option>
+                                    <option value="6">Sábado</option>
+                                    <option value="7">Domingo</option>
+                                </select>
+                                <label>Modo de Repetição...</label>
+                            </div>
                         </div>
                     </form>
-                    <div class="mdl-cell mdl-cell--8-col mdl-grid" style="margin: 0 auto; width: 95%;">
-                        <br>
-                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
-                            <span class="mdl-checkbox__label">Aceito e concordo com o Termo de Compromisso para utilização dos recursos da UENP-CLM</span>
-                        </label>
-                        <br>
-                        <br>
-                        <br>
-                        <!-- Deletable Chip -->
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Tags de Busca...</span>
-                            <button type="button" class="mdl-chip__action">
-                                <i class="material-icons">cancel</i>
-                            </button>
-                        </span>
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Tags de Busca...</span>
-                            <button type="button" class="mdl-chip__action">
-                                <i class="material-icons">cancel</i>
-                            </button>
-                        </span>
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Tags de Busca...</span>
-                            <button type="button" class="mdl-chip__action">
-                                <i class="material-icons">cancel</i>
-                            </button>
-                        </span>
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Tags de Busca...</span>
-                            <button type="button" class="mdl-chip__action">
-                                <i class="material-icons">cancel</i>
-                            </button>
-                        </span>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 75%">
-                            <input class="mdl-textfield__input" type="text" id="sample3">
-                            <label class="mdl-textfield__label" for="sample3">Descrição do Uso...</label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 75%">
-                            <input class="mdl-textfield__input" type="datetime" id="sample3">
-                            <label class="mdl-textfield__label" for="sample3">Data/Hora de Início...</label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 75%">
-                            <input class="mdl-textfield__input" type="datetime" id="sample3">
-                            <label class="mdl-textfield__label" for="sample3">Data/Hora de Fim...</label>
-                        </div>
-                        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                            <thead>
-                                <tr>
-                                    <th class="mdl-data-table__cell--non-numeric">Modo de repetição para o evento especificado...</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Segunda-feira</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Terça-feira</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Quarta-feira</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Quinta-feira</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Sexta-feira</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Sábado</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">Domingo</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
                 <br>
             </div>
@@ -185,12 +154,17 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+            $('.timepicker').timepicker();
+            $('select').formSelect();
+        });
         var chip = {
             tag: 'chip content',
             image: '', //optional
         };
         $('.chips').chips();
-        
+
         $('.chips-placeholder').chips({
             placeholder: 'Tags de Busca...',
             secondaryPlaceholder: '+Tag',
