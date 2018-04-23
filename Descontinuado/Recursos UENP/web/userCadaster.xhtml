@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Recursos UENP</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    Header
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>               
+
+                <p:layoutUnit position="center">
+                    <p:panel id="basic" header="Novo Usuário" style="margin-bottom: 20px; position: absolute; width: auto;">
+                        <h:panelGrid columns="1" cellpadding="10">                            
+                            <p:outputLabel for="console" value="Tipo de Usuário:" />
+                            <p:selectOneMenu id="console" value="#{selectOneMenuView.console}">
+                                <f:selectItem itemLabel="Diferentes tipos de usuários" itemValue="" />                                
+                            </p:selectOneMenu>
+                            <p:separator />    
+                            <p:panel header="Informações Aluno" style="width: 100%">
+                                <h:panelGrid columns="1" cellpadding="10"> 
+                                    <p:inputText placeholder="RA..."/>
+                                    <p:inputText placeholder="Nome..."/>
+                                    <p:inputText placeholder="senha..."/>        
+                                    <p:outputLabel for="console1" value="Curso:" />
+                                    <p:selectOneMenu id="console1" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Curso..." itemValue="" />                                
+                                    </p:selectOneMenu>   
+                                    <p:outputLabel for="console2" value="Turma:" />
+                                    <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Turma..." itemValue="" />                                
+                                    </p:selectOneMenu> 
+                                </h:panelGrid>
+                            </p:panel>
+                            <p:separator /> 
+                            <p:panel header="Informações Professor" style="width: 100%">
+                                <h:panelGrid columns="1" cellpadding="10"> 
+                                    <p:inputText placeholder="Código..."/>
+                                    <p:inputText placeholder="Nome..."/>
+                                    <p:inputText placeholder="senha..."/>        
+                                    <p:outputLabel for="console3" value="Múltiplos Cursos:" />
+                                    <p:selectOneMenu id="console3" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Curso..." itemValue="" />                                
+                                    </p:selectOneMenu>   
+                                    <p:outputLabel for="console4" value="Múltiplas Turmas:" />
+                                    <p:selectOneMenu id="console4" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Turma..." itemValue="" />                                
+                                    </p:selectOneMenu> 
+                                    <p:outputLabel for="console5" value="Múltiplas Disciplinas:" />
+                                    <p:selectOneMenu id="console5" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Disciplina..." itemValue="" />                                
+                                    </p:selectOneMenu> 
+                                </h:panelGrid>
+                            </p:panel>
+                            <p:separator />    
+                            <p:panel header="Informações Funcionários Diversos" style="width: 100%">
+                                <h:panelGrid columns="1" cellpadding="10"> 
+                                    <p:inputText placeholder="Código..."/>
+                                    <p:inputText placeholder="Nome..."/>
+                                    <p:inputText placeholder="senha..."/>        
+                                    <p:outputLabel for="console6" value="Função:" />
+                                    <p:selectOneMenu id="console6" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Curso..." itemValue="" />                                
+                                    </p:selectOneMenu>   
+                                    Detalhar mais. Outras informações...
+                                </h:panelGrid>
+                            </p:panel>
+                            <p:separator/>
+                            <p:button value="Aplicar" />
+                            <p:button value="Cancelar" />
+                        </h:panelGrid>
+                    </p:panel>
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+

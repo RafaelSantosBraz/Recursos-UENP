@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Recursos UENP</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    Header
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <p:menu>
+                        <p:submenu label="Resources">
+                            <p:menuitem value="Demo" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
+                            <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
+                            <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
+
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                    <p:panel id="basic" header="Alocação de Recursos" style="margin-bottom: 20px; position: absolute; width: auto;">
+                        <h:panelGrid columns="1" cellpadding="10"> 
+                            <p:outputLabel for="console" value="Recurso:" />
+                            <p:selectOneMenu id="console" value="#{selectOneMenuView.console}">
+                                <f:selectItem itemLabel="Nome do Recurso..." itemValue="" />                                
+                            </p:selectOneMenu>                                                      
+                            <p:separator/>
+                            <h3>Cronograma do Recurso</h3>                          
+                            <p:schedule id="schedule" value="#{scheduleView.eventModel}" widgetVar="myschedule" timeZone="GMT+2">
+                            </p:schedule>
+                            <p:separator/>
+                            <p:button value="Reservar" />
+                            <p:button value="Buscar" />
+                            <p:separator/>
+                            <p:panel header="Formulário de Alocação">
+                                <h:panelGrid columns="1" cellpadding="10"> 
+                                    <h:outputText value="Termo de Compromisso: " />
+                                    <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" />
+                                    <p:separator/>
+                                    <p:outputLabel for="console1" value="Finalidade de Uso:" />
+                                    <p:selectOneMenu id="console1" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Objetivo..." itemValue="" />                                
+                                    </p:selectOneMenu>   
+                                    <p:inputText placeholder="Detalhamento por objetivo...." type="text"/>
+                                    <p:separator/>
+                                    <p:inputText placeholder="Data/hora de início...." type="text"/>
+                                    <p:inputText placeholder="Data/hora de término...." type="text"/>
+                                    <p:outputLabel for="console2" value="Repetição:" />
+                                    <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}">
+                                        <f:selectItem itemLabel="Modo de laço..." itemValue="" />                                
+                                    </p:selectOneMenu>   
+                                    <p:separator/>
+                                    <p:button value="Aplicar" />
+                                    <p:button value="Cancelar" />
+                                </h:panelGrid>                        
+                            </p:panel>
+                        </h:panelGrid>                        
+                    </p:panel>
+
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+
