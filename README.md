@@ -1,2 +1,2 @@
 # Recursos-UENP-Final
-Código do projeto de Iniciação Científica PIBIC
+Protótipos do estudo de caso do projeto de Iniciação Científica - PIBIC
