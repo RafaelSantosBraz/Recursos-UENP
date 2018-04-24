@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Recurso</title>
+    <title>Pesquisa Detalhada</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -49,64 +49,44 @@
                 <br>
                 <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Dados do Recurso</b>
+                        <b>Dados para Pesquisa</b>
                     </span>
                 </div>
                 <br>
                 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
                     <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <div class="row">
+                            <div class="chips chips-placeholder col s12"></div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Resultado da Pesquisa</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 85%;">
+                    <iframe src="https://angular-material-calendar.bradb.net/fullscreen.html" style="height:600px;width:100%;border:none;"></iframe>
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <select is="a">
-                                    <option value="" disabled selected>Escolha o tipo do Recurso...</option>
-                                    <option value="1">Materiais</option>
-                                    <option value="2">Locais</option>
-                                </select>
-                                <label>Categoria...</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">title</i>
-                                <input id="last_name2" type="text" class="validate">
-                                <label for="last_name2">Nome do Recurso...</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">location_on</i>
-                                <input id="last_name3" type="text" class="validate">
-                                <label for="last_name3">Setor Resposável...</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">description</i>
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Descrição Adicional...</label>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="divider"></div>
                         </div>
                         <div class="row center">
                             <a class="waves-effect waves-light btn">
-                                <i class="material-icons right">check</i>
-                                cadastrar
+                                <i class="material-icons right">add</i>
+                                realizar alocação
                             </a>
                             <a class="waves-effect waves-light btn blue">
                                 <i class="material-icons right">clear_all</i>
                                 limpar
-                            </a>
-                            <a class="waves-effect waves-light btn red">
-                                <i class="material-icons right">cancel</i>
-                                cancelar
-                            </a>
+                            </a>                            
                         </div>
                     </form>
                 </div>
-                <br>
+                <br>                
             </div>
         </main>
         <footer class="mdl-mini-footer">
