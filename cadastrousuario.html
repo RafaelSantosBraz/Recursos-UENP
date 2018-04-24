@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alocar Recurso</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-color--grey-800">
+            <div class="mdl-layout__header-row">
+                <div class="mdl-layout-spacer "></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                </div>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Recursos UENP</span>
+            <div class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">
+                    <i class="material-icons">account_circle</i> Minha Conta
+                </a>
+                <a class="mdl-navigation__link" href="alocacaoRecurso.html">
+                    <i class="material-icons">date_range</i> Realizar Alocação
+                </a>
+                <a class="mdl-navigation__link" href="cadastroRecurso.html">
+                    <i class="material-icons">add_circle</i> Adicionar Recurso
+                </a>
+                <a class="mdl-navigation__link" href="cadastroRecurso.html">
+                    <i class="material-icons">search</i> Realizar Pesquisa
+                </a>
+            </div>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content mdl-color--grey-50">
+                <!-- Your content goes here -->
+                <br>
+                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Alocação de Recursos</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <div class="row center">
+                            <br>
+                            <div class="input-field col s10">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Nome do Recurso...</label>
+                            </div>
+                            <a class="btn-floating btn-large waves-effect waves-light red">
+                                <i class="material-icons">check</i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Cronograma do Recurso</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 85%;">
+                    <iframe src="https://angular-material-calendar.bradb.net/fullscreen.html" style="height:600px;width:100%;border:none;"></iframe>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Dados da Alocação</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <br>
+                        <div class="row">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" />
+                                <span>Aceito e concordo com o Termo de Compromisso para utilização dos recursos da UENP-CLM</span>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">title</i>
+                                <input id="last_name2" type="text" class="validate">
+                                <label for="last_name2">Título do Evento...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">description</i>
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Descrição de Uso...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="chips chips-placeholder col s12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">today</i>
+                                <input id="textarea2" type="text" class="datepicker">
+                                <label for="textarea2">Data Inicial...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">access_time</i>
+                                <input id="textarea3" type="text" class="timepicker">
+                                <label for="textarea3">Hora Inicial...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="textarea4" type="text" class="datepicker">
+                                <label for="textarea4">Data Final...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">timelapse</i>
+                                <input id="textarea5" type="text" class="timepicker">
+                                <label for="textarea5">Hora Final...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select multiple>
+                                    <option value="" disabled selected>Escolha os dias em que o evento se repete...</option>
+                                    <option value="1">Segunda-feira</option>
+                                    <option value="2">Terça-feira</option>
+                                    <option value="3">Quarta-feira</option>
+                                    <option value="4">Quinta-feira</option>
+                                    <option value="5">Sexta-feira</option>
+                                    <option value="6">Sábado</option>
+                                    <option value="7">Domingo</option>
+                                </select>
+                                <label>Modo de Repetição...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="row center">
+                            <a class="waves-effect waves-light btn">
+                                <i class="material-icons right">check</i>
+                                alocar
+                            </a>
+                            <a class="waves-effect waves-light btn blue">
+                                <i class="material-icons right">clear_all</i>
+                                limpar
+                            </a>
+                            <a class="waves-effect waves-light btn red">
+                                <i class="material-icons right">cancel</i>
+                                cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__right-section">
+                <div class="mdl-logo">Recursos UENP</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li>
+                        <a href="#">Ajuda</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacidade & Termos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+            $('.timepicker').timepicker();
+            $('select').formSelect();
+        });
+        var chip = {
+            tag: 'chip content',
+            image: '', //optional
+        };
+        $('.chips').chips();
+
+        $('.chips-placeholder').chips({
+            placeholder: 'Tags de Busca...',
+            secondaryPlaceholder: '+Tag',
+        });        
+    </script>
+</body>
+
+</html>
