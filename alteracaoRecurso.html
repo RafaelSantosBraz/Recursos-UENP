@@ -49,6 +49,27 @@
                 <br>
                 <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Seleção do Recurso</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <div class="row center">
+                            <br>
+                            <div class="input-field col s10">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Nome do Recurso a ser alterado...</label>
+                            </div>
+                            <a class="btn-floating btn-large waves-effect waves-light red">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
                         <b>Dados do Recurso</b>
                     </span>
                 </div>
@@ -59,7 +80,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select is="a">
-                                    <option value="" disabled selected>Escolha o tipo do Recurso...</option>
+                                    <option value="" disabled selected>Tipo do Recurso...</option>
                                     <option value="1">Materiais</option>
                                     <option value="2">Locais</option>
                                 </select>
@@ -93,9 +114,9 @@
                         <div class="row center">
                             <a class="waves-effect waves-light btn" href="busca.html">
                                 <i class="material-icons right">check</i>
-                                cadastrar
+                                alterar cadastro
                             </a>
-                            <a class="waves-effect waves-light btn blue" href="cadastroRecurso.html">
+                            <a class="waves-effect waves-light btn blue" href="alocacaoRecurso.html">
                                 <i class="material-icons right">clear_all</i>
                                 limpar
                             </a>
