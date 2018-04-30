@@ -34,13 +34,13 @@
             <div class="page-content mdl-color--grey-50">
                 <!-- Your content goes here -->
                 <br>
-                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Opções de Novo Usuário</b>
+                        <b>Opções para Novo Usuário</b>
                     </span>
                 </div>
                 <br>
-                <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                <div class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
                     <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
                         <div class="row">
@@ -54,10 +54,8 @@
                             <div class="input-field col s12" id="escolha">
                                 <select is="a" id="tipo">
                                     <option value="" disabled selected>Escolha o tipo do Usuário...</option>
-                                    <option value="1">Discente</option>
-                                    <option value="2">Docente</option>
-                                    <option value="3">Agente de Limpeza/Manutenção</option>
-                                    <option value="4">Agente Administrativo</option>
+                                    <option value="1">Aluno</option>
+                                    <option value="2">Funcionário</option>
                                 </select>
                                 <label>Categoria...</label>
                             </div>
@@ -65,20 +63,20 @@
                     </form>
                 </div>
                 <br>
-                <div class="demo-charts mdl-color--grey-400 mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 90%;">
+                <div id="mark" class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
                         <b>Dados do Novo Usuário</b>
                     </span>
                 </div>
                 <br>
-                <div id="conteudo" class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                <div id="conteudo" class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
                     <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
                         <div class="row">
                             <div class="input-field col s4">
                                 <i class="material-icons prefix">assignment_ind</i>
                                 <input id="last_name2" type="text" class="validate">
-                                <label for="last_name2">Código Identificador...</label>
+                                <label for="last_name2">Registro de Matrícula...</label>
                             </div>
                             <div class="input-field col s8">
                                 <i class="material-icons prefix">short_text</i>
@@ -114,26 +112,90 @@
                         </div>
                         <div class="row">
                             <div class="chips chips-placeholder col s12"></div>
-                            <label style="font-size: 13px">Marcadores Preferenciais (disciplinas, cursos, turmas, etc.)...</label>
-                        </div>
-                        <div class="row">
-                            <div class="divider"></div>
-                        </div>
-                        <div class="row center">
-                            <a class="waves-effect waves-light btn" href="busca.html">
-                                <i class="material-icons right">check</i>
-                                criar conta
-                            </a>
-                            <a class="waves-effect waves-light btn blue" href="cadastrousuario.html">
-                                <i class="material-icons right">clear_all</i>
-                                limpar
-                            </a>
-                            <a class="waves-effect waves-light btn red" href="index.html">
-                                <i class="material-icons right">cancel</i>
-                                cancelar
-                            </a>
+                            <label style="font-size: 13px">Marcadores Preferenciais (curso, turma, disciplinas, etc.)...</label>
                         </div>
                     </form>
+                </div>                
+                <div id="conteudo2" class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <br>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">assignment_ind</i>
+                                <input id="last_name9" type="text" class="validate">
+                                <label for="last_name9">Código Identificador...</label>
+                            </div>
+                            <div class="input-field col s8">
+                                <i class="material-icons prefix">short_text</i>
+                                <input id="last_name10" type="text" class="validate">
+                                <label for="last_name10">Nome...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6" id="op">
+                                <select is="b" id="ocup">
+                                    <option value="" disabled selected>Escolha a ocupação...</option>
+                                    <option value="1">Professor</option>
+                                    <option value="2">Agente de Limpeza/Manutenção</option>
+                                    <option value="3">Agente Administrativo</option>
+                                </select>
+                                <label>Categoria Ocupacional...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">featured_play_list</i>
+                                <input id="last_name11" type="text" class="validate">
+                                <label for="last_name11">Função Específica...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="last_name12" type="text" class="validate">
+                                <label for="last_name12">Endereço de E-mail...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">perm_identity</i>
+                                <input id="last_name13" type="text" class="validate">
+                                <label for="last_name13">Username...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">https</i>
+                                <input id="last_name14" type="password" class="validate">
+                                <label for="last_name14">Senha...</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">https</i>
+                                <input id="last_name15" type="password" class="validate">
+                                <label for="last_name15">Confirmar Senha...</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="chips chips-placeholder col s12"></div>
+                            <label style="font-size: 13px">Marcadores Preferenciais (disciplinas, cursos, turmas, funções, setores, etc.)...</label>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Ações</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">                        
+                    <div class="row">
+                        <br>
+                        <a class="waves-effect waves-light btn" href="busca.html">
+                            <i class="material-icons right">check</i> criar conta </a>
+                        <a class="waves-effect waves-light btn blue" href="cadastrousuario.html">
+                            <i class="material-icons right">clear_all</i> limpar </a>
+                        <a class="waves-effect waves-light btn red" href="index.html">
+                            <i class="material-icons right">cancel</i> cancelar </a>
+                    </div>
                 </div>
                 <br>
             </div>
@@ -159,23 +221,21 @@
             $('.datepicker').datepicker();
             $('.timepicker').timepicker();
             $('select').formSelect();
+            $("#conteudo2").hide();
+            $("#conteudo").hide();
+            $("#mark").hide();
             $("#tipo").change(function () {
+                $('select').formSelect();
                 if ($("#tipo").prop("selectedIndex") == "1") {
-                    $("#conteudo").html('<form class="col s12" style="margin: 0 auto; width: 95%;"> <br> <div class="row"> <div class="input-field col s4"> <i class="material-icons prefix">assignment_ind</i> <input id="last_name2" type="text" class="validate"> <label for="last_name2">Registro de Matrícula...</label> </div> <div class="input-field col s8"> <i class="material-icons prefix">short_text</i> <input id="last_name3" type="text" class="validate"> <label for="last_name3">Nome...</label> </div> </div> <div class="row"> <div class="input-field col s12"> <i class="material-icons prefix">email</i> <input id="last_name4" type="text" class="validate"> <label for="last_name4">Endereço de E-mail...</label> </div> </div> <div class="row"> <div class="input-field col s12"> <i class="material-icons prefix">perm_identity</i> <input id="last_name5" type="text" class="validate"> <label for="last_name5">Username...</label> </div> </div> <div class="row"> <div class="input-field col s6"> <i class="material-icons prefix">https</i> <input id="last_name6" type="password" class="validate"> <label for="last_name6">Senha...</label> </div> <div class="input-field col s6"> <i class="material-icons prefix">https</i> <input id="last_name7" type="password" class="validate"> <label for="last_name7">Confirmar Senha...</label> </div> </div> <div class="row"> <div class="chips chips-placeholder col s12"></div> <label style="font-size: 13px">Marcadores Preferenciais (curso, turma, disciplinas, etc.)...</label> </div> <div class="row"> <div class="divider"></div> </div> <div class="row center"> <a class="waves-effect waves-light btn" href="busca.html"> <i class="material-icons right">check</i> criar conta </a> <a class="waves-effect waves-light btn blue" href="cadastrousuario.html"> <i class="material-icons right">clear_all</i> limpar </a> <a class="waves-effect waves-light btn red" href="index.html"> <i class="material-icons right">cancel</i> cancelar </a> </div> </form> </div> <br> </div>');
+                    $("#conteudo2").hide();
+                    $("#conteudo").show();
+                    $("#mark").show();
                 }
                 else if ($("#tipo").prop("selectedIndex") == "2") {
-                    $("#conteudo").html('');
+                    $("#conteudo").hide();
+                    $("#conteudo2").show();
+                    $("#mark").show();
                 }
-                else if ($("#tipo").prop("selectedIndex") == "3") {
-                    $("#conteudo").html('');
-                }
-                else if ($("#tipo").prop("selectedIndex") == "4") {
-                    $("#conteudo").html('');
-                }
-                else {
-                    $("#conteudo").html('<form class="col s12" style="margin: 0 auto; width: 95%;"> <br> <div class="row center"> <div class="preloader-wrapper active"> <div class="spinner-layer spinner-blue"> <div class="circle-clipper left"> <div class="circle"></div> </div> <div class="gap-patch"> <div class="circle"></div> </div> <div class="circle-clipper right"> <div class="circle"></div> </div> </div> <div class="spinner-layer spinner-red"> <div class="circle-clipper left"> <div class="circle"></div> </div> <div class="gap-patch"> <div class="circle"></div> </div> <div class="circle-clipper right"> <div class="circle"></div> </div> </div> <div class="spinner-layer spinner-yellow"> <div class="circle-clipper left"> <div class="circle"></div> </div> <div class="gap-patch"> <div class="circle"></div> </div> <div class="circle-clipper right"> <div class="circle"></div> </div> </div> <div class="spinner-layer spinner-green"> <div class="circle-clipper left"> <div class="circle"></div> </div> <div class="gap-patch"> <div class="circle"></div> </div> <div class="circle-clipper right"> <div class="circle"></div> </div> </div> </div> </div> </form>');
-                }
-
             });
         });
         var chip = {
