@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos UENP</title>
+    <title>Pesquisa Detalhada</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -16,27 +16,40 @@
 <body>
     <!-- The drawer is always open in large screens. The header is always shown,
   even in small screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
             mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-color--grey-800">
             <div class="mdl-layout__header-row">
-                <div class="mdl-layout-spacer ">
-                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Recursos UENP</b>
-                    </span>
-                </div>
+                <div class="mdl-layout-spacer "></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
                 </div>
             </div>
         </header>
-        <main class="mdl-layout__content mdl-color--grey-50">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Recursos UENP</span>
+            <div class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">
+                    <i class="material-icons">account_circle</i> Minha Conta
+                </a>
+                <a class="mdl-navigation__link" href="alocacaoRecurso.html">
+                    <i class="material-icons">date_range</i> Realizar Alocação
+                </a>
+                <a class="mdl-navigation__link" href="cadastroRecurso.html">
+                    <i class="material-icons">add_circle</i> Adicionar Recurso
+                </a>
+                <a class="mdl-navigation__link" href="cadastroRecurso.html">
+                    <i class="material-icons">search</i> Realizar Pesquisa
+                </a>
+            </div>
+        </div>
+        <main class="mdl-layout__content">
             <div class="page-content mdl-color--grey-50">
                 <!-- Your content goes here -->
                 <br>
                 <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Opções para Novo Usuário</b>
+                        <b>Dados Cadastrais</b>
                     </span>
                 </div>
                 <br>
@@ -44,16 +57,9 @@
                     <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
                         <div class="row">
-                            <label>
-                                <input type="checkbox" class="filled-in" checked="checked" />
-                                <span>Aceito e concordo com os Termos de Compromisso para utilização dos recursos e da plataforma
-                                    da UENP-CLM</span>
-                            </label>
-                        </div>
-                        <div class="row">
                             <div class="input-field col s12" id="escolha">
                                 <select is="a" id="tipo">
-                                    <option value="" disabled selected>Escolha o tipo do Usuário...</option>
+                                    <option value="" disabled selected>Tipo do Usuário cadastrado...</option>
                                     <option value="1">Aluno</option>
                                     <option value="2">Funcionário</option>
                                 </select>
@@ -61,17 +67,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <br>
-                <div id="mark" class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
-                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Dados do Novo Usuário</b>
-                    </span>
-                </div>
-                <br>
-                <div id="conteudo" class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
-                    <form class="col s12" style="margin: 0 auto; width: 95%;">
-                        <br>
+                    <form id="conteudo" class="col s12" style="margin: 0 auto; width: 95%;">
                         <div class="row">
                             <div class="input-field col s4">
                                 <i class="material-icons prefix">assignment_ind</i>
@@ -114,11 +110,21 @@
                             <div class="chips chips-placeholder col s12"></div>
                             <label style="font-size: 13px">Marcadores Preferenciais (curso, turma, disciplinas, etc.)...</label>
                         </div>
+                        <div class="row">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="row center">
+                            <a class="waves-effect waves-light btn" href="busca.html">
+                                <i class="material-icons right">add</i>
+                                alterar cadastro
+                            </a>
+                            <a class="waves-effect waves-light btn blue" href="minhaConta.html">
+                                <i class="material-icons right">clear_all</i> limpar </a>
+                            <a class="waves-effect waves-light btn red" href="busca.html">
+                                <i class="material-icons right">cancel</i> cancelar </a>
+                        </div>
                     </form>
-                </div>
-                <div id="conteudo2" class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
-                    <form class="col s12" style="margin: 0 auto; width: 95%;">
-                        <br>
+                    <form id="conteudo2" class="col s12" style="margin: 0 auto; width: 95%;">
                         <div class="row">
                             <div class="input-field col s4">
                                 <i class="material-icons prefix">assignment_ind</i>
@@ -177,25 +183,68 @@
                             <div class="chips chips-placeholder col s12"></div>
                             <label style="font-size: 13px">Marcadores Preferenciais (disciplinas, cursos, turmas, funções, setores, etc.)...</label>
                         </div>
+                        <div class="row">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="row center">
+                            <a class="waves-effect waves-light btn" href="busca.html">
+                                <i class="material-icons right">add</i>
+                                alterar cadastro
+                            </a>
+                            <a class="waves-effect waves-light btn blue" href="minhaConta.html">
+                                <i class="material-icons right">clear_all</i> limpar </a>
+                            <a class="waves-effect waves-light btn red" href="busca.html">
+                                <i class="material-icons right">cancel</i> cancelar </a>
+                        </div>
                     </form>
                 </div>
                 <br>
                 <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
                     <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
-                        <b>Ações</b>
+                        <b>Minhas Reservas</b>
+                    </span>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 85%;">
+                    <iframe src="https://angular-material-calendar.bradb.net/fullscreen.html" style="height:600px;width:100%;border:none;"></iframe>
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
+                        <br>
+                        <div class="row">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="row center">
+                            <a class="waves-effect waves-light btn" href="alocacaoRecurso.html">
+                                <i class="material-icons right">add</i>
+                                alterar alocação
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="demo-charts mdl-color--cyan-600 mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid" style="margin: 0 auto; width: 40%; text-align: center;">
+                    <span class="mdl-layout-title" style="margin: 0 auto; width: 95%;">
+                        <b>Notificações</b>
                     </span>
                 </div>
                 <br>
                 <div class="demo-charts mdl-color--white mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-grid row" style="margin: 0 auto; width: 85%;">
-                    <div class="row">
+                    <form class="col s12" style="margin: 0 auto; width: 95%;">
                         <br>
-                        <a class="waves-effect waves-light btn" href="busca.html">
-                            <i class="material-icons right">check</i> criar conta </a>
-                        <a class="waves-effect waves-light btn blue" href="cadastrousuario.html">
-                            <i class="material-icons right">clear_all</i> limpar </a>
-                        <a class="waves-effect waves-light btn red" href="index.html">
-                            <i class="material-icons right">cancel</i> cancelar </a>
-                    </div>
+                        <div class="collection">
+                            <a href="" class="collection-item">Texto da menssagem 1...
+                                <i class="material-icons left">notifications</i>
+                                <i class="material-icons right">cancel</i>
+                            </a>
+                            <a href="" class="collection-item">Texto da menssagem 2...
+                                <i class="material-icons left">notifications</i>
+                                <i class="material-icons right">cancel</i>
+                            </a>
+                            <a href="" class="collection-item">Texto da menssagem 3...
+                                <i class="material-icons left">notifications</i>
+                                <i class="material-icons right">cancel</i>
+                            </a>
+                        </div>
+                    </form>
                 </div>
                 <br>
             </div>
@@ -223,18 +272,15 @@
             $('select').formSelect();
             $("#conteudo2").hide();
             $("#conteudo").hide();
-            $("#mark").hide();
             $("#tipo").change(function () {
                 $('select').formSelect();
                 if ($("#tipo").prop("selectedIndex") == "1") {
                     $("#conteudo2").hide();
                     $("#conteudo").show();
-                    $("#mark").show();
                 }
                 else if ($("#tipo").prop("selectedIndex") == "2") {
                     $("#conteudo").hide();
                     $("#conteudo2").show();
-                    $("#mark").show();
                 }
             });
         });
@@ -245,9 +291,9 @@
         $('.chips').chips();
 
         $('.chips-placeholder').chips({
-            placeholder: 'Tags...',
+            placeholder: 'Tags de Busca...',
             secondaryPlaceholder: '+Tag',
-        });           
+        });        
     </script>
 </body>
 
